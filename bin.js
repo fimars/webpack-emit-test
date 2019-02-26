@@ -3,7 +3,7 @@ const WebpackDevServer = require('webpack-dev-server');
 const webpackConfig = require('./webpack.config');
 const fs = require('fs');
 
-fs.writeFileSync('module-c.js', 'export const c = "we";');
+fs.writeFileSync('module-c.js', 'export const c = "w123213e";');
 
 function holdTheDevServer () {
   const devServerOptions = Object.assign({}, webpackConfig.devServer, {
@@ -22,8 +22,8 @@ function holdTheDevServer () {
   });
 }
 
-// # Log twice, the module-c update late then first log.
-// holdTheDevServer();
+// # log twice
+holdTheDevServer();
 
 // # work well
-setTimeout(() => holdTheDevServer(), 1000);
+// setTimeout(() => holdTheDevServer(), 1000);
